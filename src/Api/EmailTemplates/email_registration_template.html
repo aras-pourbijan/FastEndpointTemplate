@@ -1,0 +1,125 @@
+<!-- HTML -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email Registration Template</title>
+
+    <!-- STYLE -->
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+        body {
+            height: 100vh;
+            margin: 0;
+            background-color: #e7e6ff;
+        }
+
+        .modal_container {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1%;
+        }
+
+        .modal {
+            min-width: 19rem;
+            min-height: 30rem;
+            width: 50%;
+            height: 80%;
+            max-width: 80rem;
+            max-height: 45rem;
+            background: #fff;
+        }
+
+        header {
+            width: 100%;
+            height: 30%;
+            background-image: url(./Img/Background_Mail.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .content {
+            width: 100%;
+            height: 70%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        h2,
+        span,
+        a,
+        button {
+            font-family: Inter;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 32px;
+            font-weight: 600;
+            margin: 0;
+            max-width: 15rem;
+        }
+
+        span {
+            max-width: 25rem;
+            font-size: 16px;
+            font-weight: 400;
+            padding: 0 10px;
+        }
+
+        span,
+        a {
+            color: #667682;
+        }
+
+        a {
+            font-weight: bold;
+        }
+
+        button {
+            background-color: #6550b9;
+            color: #fff;
+            padding: 0.8rem 1rem;
+            border: solid 1px #6550b9;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .info_email {
+            max-width: 40rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="modal_container">
+        <div class="modal">
+            <header><!-- Tutto nel css --></header>
+            <div class="content">
+                <h2>Benvenuto in Talent Kraken</h2>
+                <span>Clicca sul bottone qui sotto per attivare il tuo account e segui la procedura in piattaforma.</span>
+                <button id="button_redirect">Attiva account</button>
+                <span>o fai click su questo link: <a href="{BaseUrl}{Id}">{BaseUrl}{Id}</a></span>
+            </div>
+        </div>
+        <span class="info_email">
+            Abbiamo inviato questa email per aggiornarti sulle modifiche relative al tuo account. Ti chiediamo di non rispondere direttamente a questo messaggio poiché è stato inviato da un indirizzo
+            e-mail non programmato per la ricezione.
+        </span>
+    </div>
+</body>
+<script type="text/javascript">
+    document.getElementById("button_redirect").onclick = function () {
+        location.href = "{BaseUrl}{Id}";
+    };
+</script>
+</html>

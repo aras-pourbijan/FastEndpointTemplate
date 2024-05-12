@@ -1,0 +1,10 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/src/Shared/bin/Debug/net8.0
+/src/Shared/obj
+/src/Api/obj
+/.vs/type-tests/DesignTimeBuild
+/.vs/type-tests
+/src/Api/bin/Debug/net8.0
